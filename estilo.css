@@ -1,0 +1,143 @@
+header {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#111827;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+}
+
+h1,h2 {
+    text-align:center;
+   /* margin-bottom:5px; */
+}
+
+input {
+    padding:10px 15px;
+    margin-bottom:10px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 15px;
+    color: #333333;
+}
+
+button[type="submit"] {
+    width:100%;
+    padding:12px;
+    background-color:#428bf7;
+    color:white;
+    border:none;
+    cursor:pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 16px;
+    transition: background 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color:#0b5ed7;
+}
+
+
+#mensaje{
+    margin-top:10px;
+    text-align:center;
+    font-weight:bold;
+}
+
+ul{
+    margin-top:15px;
+} */
+
+li{
+    display:flex;
+    
+    align-items:center;
+    padding:8px;
+    border:1px solid #ccc;
+    margin-bottom:5px;
+}
+
+.eliminar {
+    background:red;
+    color:white;
+    border:none;
+    padding:5px 10px;
+    cursor:pointer;
+}
+
+h1 {
+    color:rgb(255, 255, 255);
+    text-align: center;
+    font-weight: bolder;
+    padding: 105px;
+    font-size: 45px;
+}
+
+h3 {
+    color:rgb(255, 255, 255);
+    text-align: center;
+    font-weight: bolder;
+    padding: 105px;
+    font-size: 20px;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: rgb(87, 87, 87);
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    align-items: center;
+    width:100%;
+}
+
+form {
+    background:white;
+    padding: 40px;
+    border-radius:10px;
+    width:100%;
+    box-shadow:0 0 15px rgba(123, 123, 123, 0.3);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.usuarios-item {
+     display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+
+   background-color: white;
+    border-radius: 8px;
+    padding: 12px 20px;
+    display: flex;
+    /*justify-content: space-between;*/
+   /* align-items: inline;*/
+    margin-bottom: 10px;
+    box-shadow: 0 2px 6px rgba(123, 123, 123, 0.3);
+    width: 100%;
+    justify-content:space-between;
+}
+.usuariosdatos {
+    color: rgb(118, 118, 118);
+}
+.Eliminar {
+    background-color: white;
+    color: red;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2ss ease;
+    
+}
+.Eliminar:hover {
+    transform: scale(1.2);
+
+}

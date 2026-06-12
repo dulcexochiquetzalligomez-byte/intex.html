@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+<header>
+<h1> Registro de Usuarios </h1>
+</header> 
+<div class="contenedor">
+<main>
+<form id="formulario">
+<!--1ra cajita-->
+    <input type="text" id="nombre" placeholder="Nombre" required>
+<!--2da cajita-->
+    <input type="email" id="correo" placeholder="Correo electrónico" requiered>
+<!--3ra cajita -->
+    <input type="number" id="edad" placeholder="Edad" min="18" max="120" required>
+
+<button type="submit">
+     Registrar
+</button>
+</form>
+</main>
+
+<h3>Usuarios Registrados</h3>
+
+<section>
+    <div class="listadeusuarios" id="contenedorusuarios">
+    <div class="usuarios-item">
+    <div class="usuariodatos">
+    <strong>Susana Torres</strong>ejempo_correo1@gmail.com Edad:30 años
+</div>
+    <button class="Eliminar">X</button>
+</div>
+</div>
+</section>
+<script>
+const formulario= document.getElementById('formulario');
+const contenedorusuarios= document.getElementById('contenedorusuarios');
+formulario.addEventListener('submit',function(e){
+    e.preventDefault();
+    const nombre=document.getElementById('nombre').value.trim();
+    const correo=document.getElementById('correo').value.trim();
+    const edad=document.getElementById('edad').value.trim();
+    if(nombre&&correo&&edad){
+        const nuevo=document.createElement('div');
+        nuevo.className='usuarios-item';
+        nuevo.innerHTML= `<div class="usuariodatos">
+            <strong>${nombre}</strong>${correo}Edad:${edad} años</div>
+            <button class="eliminar">X</button>`;
+            nuevo.querySelector('.eliminar').addEventListener('click',function(){
+                nuevo.remove();
+            });
+    contenedorusuarios.appendChild(nuevo)
+    formulario.reset();   
+    }
+});
+document.querySelectorAll('.eliminar').forEach(boton=>{
+    boton.addEventListener('click',function(){
+        this.closest('.usuarios-item').remove();
+    });
+});
+</script>
+</body>
+</html>
